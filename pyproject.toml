@@ -1,0 +1,23 @@
+[project]
+name = "ai_gemini_model"
+version = "0.1.0"
+description = "ai-gemini-model using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.165.1,<1.0.0"
+]
+
+[project.scripts]
+ai_gemini_model = "ai_gemini_model.main:run"
+run_crew = "ai_gemini_model.main:run"
+train = "ai_gemini_model.main:train"
+replay = "ai_gemini_model.main:replay"
+test = "ai_gemini_model.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
